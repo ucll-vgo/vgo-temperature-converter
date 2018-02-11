@@ -9,5 +9,6 @@
     <StackPanel>
         <TextBox x:Name="textBox" />
         <Button Content="Convert to Celsius" Click="ConvertToCelsius" />
+        <Button Content="Convert to Fahrenheit" Click="ConvertToFahrenheit" />
     </StackPanel>
 </Window>
