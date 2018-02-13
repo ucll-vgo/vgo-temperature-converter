@@ -27,6 +27,7 @@
         <Style x:Key="buttonStyle" TargetType="{x:Type Button}">
             <Setter Property="FontSize" Value="16" />
         </Style>
+        <local:CelsiusConverter x:Key="celsiusConverter" />
     </Window.Resources>
     <StackPanel>
         <Grid>
@@ -38,7 +39,7 @@
                 <RowDefinition />
             </Grid.RowDefinitions>
             <TextBlock Grid.Row="0" Text="Celsius" Style="{StaticResource labelStyle}" />
-            <TextBox Grid.Row="1"  x:Name="celsiusTextBox" Style="{StaticResource textBoxStyle}" />
+            <TextBox Grid.Row="1"  x:Name="celsiusTextBox" Style="{StaticResource textBoxStyle}" Text="{Binding ElementName=slider, Path=Value, Converter={StaticResource celsiusConverter}, UpdateSourceTrigger=PropertyChanged}" />
         </Grid>
         <Grid>
             <Grid.ColumnDefinitions>

@@ -34,10 +34,8 @@ namespace View
 
             var kelvinString = kelvin.ToString();
             var fahrenheitString = fahrenheit.ToString();
-            var celsiusString = celsius.ToString();
 
             fahrenheitTextBox.Text = fahrenheitString;
-            celsiusTextBox.Text = celsiusString;
         }
     }
 
