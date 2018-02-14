@@ -27,8 +27,16 @@
         <Style x:Key="buttonStyle" TargetType="{x:Type Button}">
             <Setter Property="FontSize" Value="16" />
         </Style>
-        <local:CelsiusConverter x:Key="celsiusConverter" />
-        <local:FahrenheitConverter x:Key="fahrenheitConverter" />
+        <local:TemperatureConverter x:Key="celsiusConverter">
+            <local:TemperatureConverter.TemperatureScale>
+                <local:CelsiusTemperatureScale />
+            </local:TemperatureConverter.TemperatureScale>
+        </local:TemperatureConverter>
+        <local:TemperatureConverter x:Key="fahrenheitConverter">
+            <local:TemperatureConverter.TemperatureScale>
+                <local:FahrenheitTemperatureScale />
+            </local:TemperatureConverter.TemperatureScale>
+        </local:TemperatureConverter>
     </Window.Resources>
     <StackPanel>
         <Grid>
