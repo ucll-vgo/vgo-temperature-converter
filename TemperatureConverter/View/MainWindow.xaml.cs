@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
+using System.Diagnostics;
 using System.Globalization;
 using System.Linq;
 using System.Text;
@@ -19,11 +21,29 @@ namespace View
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class MainWindow : Window, INotifyPropertyChanged
     {
         public MainWindow()
         {
             InitializeComponent();
+        }
+
+        private double temperatureInKelvin;
+
+        public event PropertyChangedEventHandler PropertyChanged;
+
+        public double TemperatureInKelvin
+        {
+            get
+            {
+                return temperatureInKelvin;
+            }
+            set
+            {
+                temperatureInKelvin = value;
+
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(nameof(TemperatureInKelvin)));
+            }
         }
     }
 
