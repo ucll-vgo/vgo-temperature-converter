@@ -53,11 +53,11 @@
                                 <ColumnDefinition Width="*" />
                                 <ColumnDefinition Width="auto" />
                             </Grid.ColumnDefinitions>
-                            <Button Grid.Column="0" Content="-" Style="{StaticResource buttonStyle}" />
+                            <Button Grid.Column="0" Content="-" Style="{StaticResource buttonStyle}" Command="{Binding Add}" CommandParameter="-1" />
                             <TextBox Grid.Column="1"
                                      Style="{StaticResource textBoxStyle}"
                                      Text="{Binding Path=Temperature.Value, UpdateSourceTrigger=PropertyChanged}" />
-                            <Button Grid.Column="2" Content="+" Style="{StaticResource buttonStyle}" Command="{Binding Increment}" />
+                            <Button Grid.Column="2" Content="+" Style="{StaticResource buttonStyle}" Command="{Binding Add}" CommandParameter="1" />
                         </Grid>
                     </Grid>
                 </DataTemplate>
