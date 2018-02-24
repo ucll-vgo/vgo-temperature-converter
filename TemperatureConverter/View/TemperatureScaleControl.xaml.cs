@@ -41,6 +41,6 @@ namespace View
         }
 
         public static readonly DependencyProperty ValueProperty =
-            DependencyProperty.Register("Value", typeof(double), typeof(TemperatureScaleControl), new PropertyMetadata(0.0));
+            DependencyProperty.Register("Value", typeof(double), typeof(TemperatureScaleControl), new FrameworkPropertyMetadata(0.0, FrameworkPropertyMetadataOptions.BindsTwoWayByDefault));
     }
 }
