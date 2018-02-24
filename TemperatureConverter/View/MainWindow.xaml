@@ -11,7 +11,7 @@
         <ItemsControl ItemsSource="{Binding Scales}">
             <ItemsControl.ItemTemplate>
                 <DataTemplate>
-                    <local:TemperatureScaleControl Header="{Binding Name}" />
+                    <local:TemperatureScaleControl Header="{Binding Name}" Value="{Binding Temperature.Value}" />
                 </DataTemplate>
             </ItemsControl.ItemTemplate>
         </ItemsControl>

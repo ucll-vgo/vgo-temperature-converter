@@ -46,9 +46,8 @@
                 <ColumnDefinition Width="auto" />
             </Grid.ColumnDefinitions>
             <Button Grid.Column="0" Content="-" Style="{StaticResource buttonStyle}" Command="{Binding Decrement}" />
-            <TextBox Grid.Column="1"
-                                     Style="{StaticResource textBoxStyle}"
-                                     Text="{Binding Path=Temperature.Value, UpdateSourceTrigger=PropertyChanged}" />
+            <TextBox Grid.Column="1" Style="{StaticResource textBoxStyle}"
+                                     Text="{Binding Path=Value, RelativeSource={RelativeSource Mode=FindAncestor, AncestorType=UserControl}, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
             <Button Grid.Column="2" Content="+" Style="{StaticResource buttonStyle}" Command="{Binding Increment}" />
         </Grid>
     </Grid>
